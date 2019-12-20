@@ -11,8 +11,15 @@ const gridChilds = Array.from(document.querySelectorAll('.grid-child'));
 const markAllUnselected = () => gridChilds.forEach(gridChild => gridChild.classList.remove('grid-child--active'));
 const markSelected = (gridChild) => gridChild.classList.add('grid-child--active');
 const gridChildClicked = (evt) => {
-	markAllUnselected();
+	if (!evt.ctrlKey) {
+		markAllUnselected();
+	}
 	markSelected(evt.target);
+	if (window.getSelection) {
+		window.getSelection().removeAllRanges();
+	} else if (document.selection) {
+		document.selection.empty();
+	}
 };
 
 document.documentElement.addEventListener('mousemove', mouseMoveListener);

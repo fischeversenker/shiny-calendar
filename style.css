@@ -59,6 +59,6 @@ body, html {
 	top: calc(var(--mouse-y, -1000) * 1px);
 	width: var(--dot-radius-px);
 	height: var(--dot-radius-px);
-	background: radial-gradient(circle, white 0%, transparent 50%);
+	background: radial-gradient(circle, #ffffffaa 0%, transparent 50%);
 	border-radius: 50%;
 }
