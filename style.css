@@ -4,17 +4,31 @@
   --grid-cell-size: 50px;
 }
 
-body, html {
-  background-color: black;
+body {
+  background-color: #1d1d1d;
   font-family: Roboto, sans-serif;
   margin: 0;
-  padding: 0;
+  text-align: center;
 }
 
 .wrapper {
   display: inline-block;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 0 7px 2px #444;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  box-sizing: border-box;
+}
+
+.section:last-of-type {
+  background-color: white;
 }
 
 .grid {
@@ -29,7 +43,7 @@ body, html {
   align-items: center;
   justify-content: center;
   border: 1px solid transparent;
-  background-color: #000000dd;
+  background-color: #111111d7;
   z-index: 1;
   color: white;
 }
@@ -55,6 +69,6 @@ body, html {
   top: calc(var(--mouse-y, -1000) * 1px);
   width: var(--dot-radius-px);
   height: var(--dot-radius-px);
-  background: radial-gradient(circle, #ffffffaa 0%, transparent 50%);
+  background: radial-gradient(circle, #ffffffdd 0%, transparent 50%);
   border-radius: 50%;
 }
